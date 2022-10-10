@@ -3,7 +3,6 @@ from django.contrib.admin import ModelAdmin, register
 
 from .models import Category, Genre, Title, Review, Comment
 
-
 admin.site.register(Review)
 admin.site.register(Comment)
 

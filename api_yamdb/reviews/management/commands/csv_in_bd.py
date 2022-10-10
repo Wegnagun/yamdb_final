@@ -2,8 +2,8 @@ import csv
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from users.models import CustomUser
 from reviews.models import Category, Genre, Title, Review, Comment
+from users.models import CustomUser
 
 TABLES = [
     (CustomUser, 'users.csv'),
