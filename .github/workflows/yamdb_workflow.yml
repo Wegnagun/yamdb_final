@@ -43,7 +43,7 @@ jobs:
           no-cache: true
           push: true
           context: ./api_yamdb/
-          tags: wegnagun/api_yamdb
+          tags: wegnagun/yamdb_final
 
   deploy:
       runs-on: ubuntu-latest
@@ -57,6 +57,7 @@ jobs:
             key: ${{ secrets.SSH_KEY }}
             passphrase: ${{ secrets.PASSPHRASE }}
             script: |
+              sudo docker pull wegnagun/yamdb_final
               sudo docker-compose stop
               sudo docker-compose rm web
               touch .env
