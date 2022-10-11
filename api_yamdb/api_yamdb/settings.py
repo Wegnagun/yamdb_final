@@ -4,7 +4,7 @@ from datetime import timedelta
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('KEY', default='enter you Secret key')
 DEBUG = False
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '51.250.64.245']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
