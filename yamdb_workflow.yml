@@ -40,10 +40,9 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          no-cache: true
           push: true
-          context: ./api_yamdb/
-          tags: wegnagun/api_yamdb
+          tags: wegnagun/yamdb_final:latest
+          file: api_yamdb/Dockerfile
 
   deploy:
       runs-on: ubuntu-latest
