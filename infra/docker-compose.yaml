@@ -8,7 +8,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: wegnagun/yamdb_final:latest
+    image: wegnagun/yamdb_final
     restart: always
     volumes:
       - static_value:/app/static/
@@ -31,6 +31,5 @@ services:
 
 volumes:
   db_value:
-  conf_value:
   static_value:
   media_value:
