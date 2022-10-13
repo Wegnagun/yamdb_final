@@ -71,11 +71,7 @@ Python 3.7, Django 2.2, DRF, JWT, NGINX, PostgreSQL, Docker, Docker-compose
 выполните команды после запуска контейнера:  
 `docker-compose exec имя_веб_контейнера python manage.py migrate`  
 `docker-compose exec имя_веб_контейнера python manage.py createsuperuser`  
-`docker-compose exec имя_веб_контейнера python manage.py collectstatic --no-input`  
-
-либо подгрузить образец заполненной базы данных:  
-`docker cp fixtures.json имя_веб_контейнера:/app/ ` копируем фикстуру в контейнер  
-`python manage.py loaddata fixtures.json` наполняем базу  
+`docker-compose exec имя_веб_контейнера python manage.py collectstatic --no-input`
 
 ### Пользовательские роли
 - **Аноним** — может просматривать описания произведений, читать отзывы и комментарии.
