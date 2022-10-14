@@ -29,8 +29,8 @@ jobs:
     needs: tests
     if:
       contains('
-      refs/heads/master
-      refs/heads/main
+        refs/heads/master
+        refs/heads/main
       ', github.ref)
     steps:
       - name: Check out the repo
