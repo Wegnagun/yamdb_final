@@ -60,6 +60,7 @@ jobs:
             passphrase: ${{ secrets.PASSPHRASE }}
             script: |
               cd yamdb_final
+              sudo docker pull wegnagun/yamdb_final
               sudo docker-compose stop
               sudo docker-compose rm web
               rm .env
