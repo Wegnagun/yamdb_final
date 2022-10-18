@@ -60,9 +60,9 @@ jobs:
             passphrase: ${{ secrets.PASSPHRASE }}
             script: |
               cd yamdb_final
-              sudo docker pull wegnagun/yamdb_final
               sudo docker-compose stop
               sudo docker-compose rm web
+              sudo docker pull ${{ secrets.USER }}/yamdb_final:latest
               rm .env
               touch .env
               echo KEY=${{ secrets.KEY }} >> .env
