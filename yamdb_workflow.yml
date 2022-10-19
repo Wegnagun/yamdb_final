@@ -62,7 +62,7 @@ jobs:
               cd yamdb_final
               sudo docker-compose stop
               sudo docker-compose rm web
-              sudo docker pull ${{ secrets.USER }}/yamdb_final:latest
+              sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
               rm .env
               touch .env
               echo KEY=${{ secrets.KEY }} >> .env
